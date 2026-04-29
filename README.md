@@ -112,7 +112,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-<p align="center">
-  <b>Built with precision by OmNexus</b><br/>
-  <i>"Architecting the future of engineering careers."</i>
-</p>
+**© 2026 OmNexus. All Rights Reserved.**
