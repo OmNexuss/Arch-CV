@@ -83,9 +83,9 @@ graph TD
    ```
 
 3. **Set up environment variables**:
-   Create a `.env.local` file in the root directory:
+   Create a `.env.local` file in the root directory (you can use `.env.example` as a template):
    ```env
-   GOOGLE_GENERATIVE_AI_API_KEY=your_gemini_api_key
+   GEMINI_API_KEY=your_gemini_api_key
    ```
 
 4. **Run the development server**:
