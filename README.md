@@ -1,26 +1,26 @@
 # ARCH-CV 🏗️
-### Engineering Career Architecture Platform
+### Mühendislik Kariyer Mimarisi Platformu
 
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Zustand](https://img.shields.io/badge/Zustand-State-orange?style=for-the-badge)](https://zustand-demo.pmnd.rs/)
 [![Clean Architecture](https://img.shields.io/badge/Clean-Architecture-green?style=for-the-badge)](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 
-**ARCH-CV** is a high-end career architecture tool designed specifically for software engineers. It goes beyond simple resume building by analyzing your digital footprint and helping you construct a professional manifesto that reflects your engineering philosophy.
+**ARCH-CV**, yazılım mühendisleri için özel olarak tasarlanmış üst düzey bir kariyer mimarisi aracıdır. Dijital ayak izinizi analiz ederek ve mühendislik felsefenizi yansıtan profesyonel bir manifesto oluşturmanıza yardımcı olarak basit bir özgeçmiş oluşturucunun ötesine geçer.
 
 ---
 
-## ✨ Key Features
+## ✨ Temel Özellikler
 
-- **🛡️ Clean Architecture**: Built with a strict separation of concerns (Domain, Application, Infrastructure, Presentation) to ensure zero technical debt and high testability.
-- **🔗 GitHub Intelligence**: Automatically synchronizes your top projects, languages, and contributions to build a data-driven profile.
-- **🧠 Engineering Manifesto**: Uses AI to help you articulate your engineering principles and problem-solving approach.
-- **💎 Premium UI/UX**: A sleek, dark-themed interface built with Tailwind CSS and Framer Motion for a state-of-the-art user experience.
-- **⚡ Real-time Preview**: See your "Career Blueprint" take shape instantly as you configure your identity and experiences.
+- **🛡️ Clean Architecture**: Teknik borcu sıfıra indirmek ve yüksek test edilebilirlik sağlamak için katı bir sorumluluk ayrımı (Domain, Application, Infrastructure, Presentation) ile inşa edilmiştir.
+- **🔗 GitHub Zekası**: Veri odaklı bir profil oluşturmak için en iyi projelerinizi, dillerinizi ve katkılarınızı otomatik olarak senkronize eder.
+- **🧠 Mühendislik Manifestosu**: Mühendislik prensiplerinizi ve sorun çözme yaklaşımınızı ifade etmenize yardımcı olmak için AI kullanır.
+- **💎 Premium UI/UX**: En modern kullanıcı deneyimi için Tailwind CSS ve Framer Motion ile oluşturulmuş şık, koyu temalı bir arayüz.
+- **⚡ Gerçek Zamanlı Önizleme**: Kimliğinizi ve deneyimlerinizi yapılandırırken "Kariyer Blueprint"inizin anında şekillenmesini izleyin.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Teknoloji Yığını
 
 - **Framework**: [Next.js 15+](https://nextjs.org/) (App Router)
 - **State Management**: [Zustand](https://github.com/pmndrs/zustand)
@@ -31,24 +31,24 @@
 
 ---
 
-## 🏗️ Architecture Overview
+## 🏗️ Mimari Genel Bakış
 
-The project follows the **Uncle Bob's Clean Architecture** pattern:
+Proje, **Uncle Bob'un Clean Architecture** desenini takip eder:
 
 ```mermaid
 graph TD
-    subgraph "Presentation Layer (React/Next.js)"
+    subgraph "Sunum Katmanı (React/Next.js)"
         Views --> Components
         Views --> Hooks
     end
-    subgraph "Application Layer"
+    subgraph "Uygulama Katmanı"
         UseCases --> Interfaces
     end
-    subgraph "Domain Layer (Enterprise Logic)"
+    subgraph "Domain Katmanı (Kurumsal Mantık)"
         Entities
         Interfaces
     end
-    subgraph "Infrastructure Layer"
+    subgraph "Altyapı Katmanı"
         Repositories --> API_Services
         Repositories --> DB
     end
@@ -60,56 +60,59 @@ graph TD
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Başlarken
 
-### Prerequisites
+### Gereksinimler
 
-- Node.js 18.x or higher
+- Node.js 18.x veya üzeri
 - npm / pnpm / yarn
-- A GitHub Personal Access Token (for extended API limits)
-- Google Gemini API Key (for the Manifesto generator)
+- Bir GitHub Kişisel Erişim Token'ı (genişletilmiş API sınırları için)
+- Google Gemini API Anahtarı (Manifesto oluşturucu için)
 
-### Installation
+### Kurulum
 
-1. **Clone the repository**:
+1. **Depoyu kopyalayın**:
    ```bash
    git clone https://github.com/OmNexuss/Arch-CV.git
    cd Arch-CV
    ```
 
-2. **Install dependencies**:
+2. **Bağımlılıkları yükleyin**:
    ```bash
    npm install
    ```
 
-3. **Set up environment variables**:
-   Create a `.env.local` file in the root directory (you can use `.env.example` as a template):
+3. **Ortam değişkenlerini ayarlayın**:
+   Kök dizinde bir `.env.local` dosyası oluşturun (örnek olarak `.env.example` dosyasını kullanabilirsiniz):
    ```env
    GEMINI_API_KEY=your_gemini_api_key
    ```
 
-4. **Run the development server**:
+4. **Geliştirme sunucusunu çalıştırın**:
    ```bash
    npm run dev
    ```
 
 ---
 
-## 🤝 Contributing
+## 🤝 Katkıda Bulunma
 
-Contributions are welcome! If you'd like to improve ARCH-CV, please follow these steps:
-1. Fork the project.
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the Branch (`git push origin feature/AmazingFeature`).
-5. Open a Pull Request.
-
----
-
-## ⚖️ License
-
-Distributed under the MIT License. See `LICENSE` for more information.
+Katkılarınız bekliyoruz! ARCH-CV'yi geliştirmek isterseniz lütfen şu adımları izleyin:
+1. Projeyi fork edin.
+2. Özellik Dalınızı (Feature Branch) oluşturun (`git checkout -b feature/AmazingFeature`).
+3. Değişikliklerinizi commitleyin (`git commit -m 'Add some AmazingFeature'`).
+4. Dalı pushlayın (`git push origin feature/AmazingFeature`).
+5. Bir Pull Request açın.
 
 ---
 
-**© 2026 OmNexus. All Rights Reserved.**
+## ⚖️ Lisans
+
+MIT Lisansı ile dağıtılmaktadır. Daha fazla bilgi için `LICENSE` dosyasına bakın.
+
+---
+
+<p align="center">
+  <b>OmNexus tarafından hassasiyetle inşa edilmiştir</b><br/>
+  <i>"Mühendislik kariyerlerinin geleceğini mimariyoruz."</i>
+</p>
