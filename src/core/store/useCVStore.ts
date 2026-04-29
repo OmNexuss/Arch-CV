@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { Project } from '@/domain/entities/GithubProfile';
 
 interface CVState {
   currentStep: number;
@@ -10,7 +11,7 @@ interface CVState {
     email: string;
     location: string;
   };
-  projects: any[]; 
+  projects: Project[]; 
   philosophy: {
     principles: string;
     approach: string;
@@ -21,9 +22,10 @@ interface CVState {
   nextStep: () => void;
   prevStep: () => void;
   setPersonalInfo: (info: Partial<CVState['personalInfo']>) => void;
-  setProjects: (projects: any[]) => void;
+  setProjects: (projects: Project[]) => void;
   setPhilosophy: (philosophy: Partial<CVState['philosophy']>) => void;
 }
+
 
 export const useCVStore = create<CVState>((set) => ({
   currentStep: 1,

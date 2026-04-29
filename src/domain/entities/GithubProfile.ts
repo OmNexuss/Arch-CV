@@ -1,15 +1,17 @@
-// src/domain/entities/GithubProfile.ts
+export interface Project {
+  name: string;
+  description: string;
+  url: string;
+  stars: number;
+  language?: string;
+}
 
 export interface GithubProfile {
   username: string;
   avatarUrl: string;
   bio: string;
+  fullName: string;
   publicRepos: number;
-  topLanguages: string[]; // AI burada devreye girip en çok kullanılan dilleri süzecek
-  recentProjects: {
-    name: string;
-    description: string;
-    url: string;
-    stars: number;
-  }[];
-}
+  topLanguages: string[];
+  recentProjects: Project[];
+}

@@ -1,24 +1,23 @@
 // src/application/use-cases/FetchGithubData.ts
-import { GithubService } from "@/infrastructure/api/GithubService";
+import { IGithubRepository } from "@/domain/interfaces/IGithubRepository";
+import { GithubRepository } from "@/infrastructure/repositories/GithubRepository";
 
 export class FetchGithubData {
-  private githubService = new GithubService();
+  private githubRepository: IGithubRepository;
+
+  constructor(repository?: IGithubRepository) {
+    this.githubRepository = repository || new GithubRepository();
+  }
 
   async execute(username: string) {
-    const profile = await this.githubService.getProfile(username);
-    const repos = await this.githubService.getRepos(username);
+    const profile = await this.githubRepository.getProfile(username);
+    const projects = await this.githubRepository.getRepos(username);
 
-    // Efendim, burada basit bir "Mapping" (Dönüştürme) yapıyoruz.
     return {
-      fullName: profile.name || profile.login,
-      bio: profile.bio || "",
-      avatarUrl: profile.avatar_url,
-      projects: repos.map((repo: any) => ({
-        name: repo.name,
-        description: repo.description,
-        language: repo.language,
-        stars: repo.stargazers_count
-      }))
+      fullName: profile.fullName,
+      bio: profile.bio,
+      avatarUrl: profile.avatarUrl,
+      projects: projects
     };
   }
-}
+}
