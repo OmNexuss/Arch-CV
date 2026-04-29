@@ -112,7 +112,4 @@ MIT Lisansı ile dağıtılmaktadır. Daha fazla bilgi için `LICENSE` dosyasın
 
 ---
 
-<p align="center">
-  <b>OmNexus tarafından hassasiyetle inşa edilmiştir</b><br/>
-  <i>"Mühendislik kariyerlerinin geleceğini mimariyoruz."</i>
-</p>
+**© 2026 OmNexus. Tüm Hakları Saklıdır.**
